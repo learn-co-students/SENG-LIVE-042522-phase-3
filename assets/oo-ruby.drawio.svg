@@ -1,52 +1,53 @@
-<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="701px" height="381px" viewBox="-0.5 -0.5 701 381" content="&lt;mxfile&gt;&lt;diagram id=&quot;1zew5o6CK6g_NzoAc26E&quot; name=&quot;Page-1&quot;&gt;7Ztdb+I4FIZ/DZet8gEpvSQB2pUYaXbb1c72ZuQmJnFrYtYxX/31e+zYJGkKoh9ARpOLInxynJjjx6/fBNpxg9n6hqN58o1FmHYcK1p33GHHcfp9D15lYJMHuo4OxJxEecguAnfkBeugpaMLEuGskigYo4LMq8GQpSkORSWGOGeratqU0epV5yjGtcBdiGg9+g+JRKI/Vs8q4reYxIm5sm3pI48ofI45W6T6eh3HdfquZ/fzwzNkzqXzswRFbFUKuaOOG3DGRP5utg4wlaU1Zcv7jXcc3Y6b41Qc0mE8cO/nP/375fJpOrKtwc04yC7MLCwRXWDzOdRoxcZUCEdQMN1kXCQsZimioyLqhwu+xPIyFjRUSVTLhlb2jEWY6ENF7wljc53xhIXYaC7QQjAIJWJG9dEpS0XAKONqLO54NB6M5KkywdkzLh0ZDgd2byR7EEpLcT/wAqcHcYoeMfW3k1ZK0dPm+vWS6ipnbMFDvKeOumqyVKWOeiJuMJthwTeQwDFFgiyr7CGNcLzN23b9zggMxbH0arMNlnqxOZ5VPYVAPMZC9ypggDelYRQhhcg7cDF0lHAJKMqyyxSvOo5HoWr+I4d3sXxH0iXMUSZPmhJBEJWTDGOFFVPLDTlGQuUi+FOnewPDiZzDKiBw1jiF9yHMGYYJ9ZeYCwLre6APzEgUKUo5zsgLelTnkwjNZZVU3Xp+pzfcA9uH0Nm/3mCQeF2hQAucHmBFJCoI6V7WZTfv91GkNEJet9qDTacZPgo8dq/VmgIY4IRvfsjBXvZM8189dtUYriutjW59WqNyidiXd30aMevaZxYztxWzz4mZWdCfFrML69LxvKsKDvbn5M2c2a6c9OpUYmdG2opds8XOPZFz865eiV33xGLXbcXuU2K3XdBf4Nw8t+ceX+vM/nYCsXubrRoI2YrMKEqxnjCjfXKiwoTQaII2bCEnIRMwZablJ4yTF8hHhhw4zIVWNteqZNzJnkYwJTb4u5lZ+1XoG1pXEicoE2Y0jFI0z0g+o7LjDJYnSX0mBJvV9Nh6rcdfJ647FbDG4U7e3G5VelzdXBWPO2yTkpQfdfSs3QRWEHovL3XjVZaZV9DApxS10qUsp6hUNR0yqkLxVOzTlGyOQpLGE5U27BaRv3QFZIhB9ylVT20S6IjTmvj4UKNA7mogQ04AbbtoK2Waw94csBSGj4iaQgyYrbBEDQgSSJR07QNEHapeB0PzTkjcYzFSv1kkUESUhnIjgkskLKoLTMvKOVjxzs1K3dsgIfhPFIY4yxiX3iTCUwJzHjidAYzCg7LYqm7gkbFKUN7Gik27BasBYF2fEKzbh6eUPUf3Sdf5+5Y/PJA//+tf1G/iMkynyqlNc2zgtgpeEilKb3uelpxzkGM759Yk86ihxM4f2w2s9cUN8MXejsePZWT6J/XFTr/GTILUXbiQr2yVqjvyrQ1aIk7k+mtV5ziqc3UwUntc81sIHW/Dqt9ahShVG1Y2Z8riqB2rBFHJDW1ttbZLkcrc8qcLVuSH7Y7XHPYOla/X37J8HXv13xLscEskqyDY8tMEft60TMcSr71fPLaWqamWyXUa55ncuuq0numMunN9MFON8Uz1R42tZ/o92Du/Zzr4CVPrmRrIz/k9k/n9QuuZmuqZev3meab6U4LWM51Pd7Zr+BfyTF7rmX5T9s7vmepbXuuZfh1+jumZoFn8Q1X+67bin9bc0f8=&lt;/diagram&gt;&lt;/mxfile&gt;" style="background-color: rgb(40, 54, 24);">
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="781px" height="451px" viewBox="-0.5 -0.5 781 451" content="&lt;mxfile&gt;&lt;diagram id=&quot;1zew5o6CK6g_NzoAc26E&quot; name=&quot;Page-1&quot;&gt;7VvbcqM4EP0aPybFxSbOo8FOslWZqtlNtnY2L1MKyKBERl4h3+brtwUSF4u4PEl8mRoeTKFWS4juo6ODwD03mK1vOZonX1iEac+xonXPHfccZzj04CgNm8LgXA8KQ8xJVJjsyvBAfmBltJR1QSKcNRwFY1SQedMYsjTFoWjYEOds1XSbMtq86hzF2DA8hIia1n9IJBJ1WwOrst9hEif6yralap5R+BpztkjV9XqO6wxdzx4W1TOk+1L+WYIitqqZ3EnPDThjojibrQNMZWh12Ip2N2/UOkWvS0QX6k78Wz1kjlOxTx+u0Ycaqtjo8OQ3iKW/1XP9VUIEfpijUNauAA9gS8SMQsmG0ymhNGCU8byta1ku/MCuLoO5wOutqFdDdcqYANQwm2HBN+CiGugorqocXQ2VLanlp68ThxQu4rKrKhBwomLRHpeW0e0O5M3IfZx/9x+Xy5fpxLZGtzdBdqERviu8OAIwqiLjImExSxGdVFY/XPBlGf8qGzLc2SsWYaKqqtb3jM2VxwsWYqPmHFoItpUulopaum4mN6OJ7CoTnL3iWs14PLIHEzPBfuAFzgDsFD1j6pcTouaipoTGQD2kKsoZW/AQ74ijipoMVa2hiRSOKRJk2ZzXbTBQTb8yAkMpEWZr5Ggi87aQJBCPsVCttsBUDmMvfLXfpjmjA4qy7DLFq57jUYia/8zhLJZnJF1CjjLZaUoEQVQmGcYKbGT4hhwjkfsi+OXdtcDwXuawCRDoNU7hPIScYUioL6cwAe4cqYoZiaIcpRxn5Ad6zvuTEJrLKOVxG/i9wXgH2N4Fnd3zzeQZtXioATYIuI1srMt+0e69kFIQ8vrNFmw6zfBBwGMPOq6pAAM44ZtvcrCXA138V409L4zXjdJGlT7MUQVF7PK7Pg6Z9e0Tk5kpLToy+yky0xP6w2R2YV06nnfVgIP9MXrTPduNTq+ORXZ6pB3ZnTfZuUdSbt7VFtn1j0x2/Y7sPkR25YT+BOXmuQP38Fyn17cjkF07tgwgZCsyoyjFKmGa+2SiwoTQ6B5t2EImIROQMl3yE8bJD/BHGjlQzYViNtdqeDzIlpowJWzwV51Ze8v0Ba0bjvcoE3o0jFI0z0iRUdlwBtOTpD4Tgs0MPra2+fjzyPVNBjRw+Cbe3H6Telxzm8Lut2xT2J+xTdFOugZe6jSzBRq4S2GELmUFimpRUybNKhRPxS5OyeYoJGl8n7uN+5XlLxUBaWLQfErzHbEEGuLUIB8fYhTIVQ1oyAmgbFflnJnmsDYHLIXhI5KnEAPMVlhCDRAkkKjx2jsQtS977Q2anwSJeyiMmA+LBIKI0lAuRHCJhEUmwXRYOQVWvFNjxdQ2SAj+HYUhzjLGpTaJ8JRAzgOnN4JReBAWO48baGScO+Taxop1uQPWGQDr+ojAunt6Sdlr9Jj0nb/v+NMT+fO/4YX5EJdhOs2V2rSADTxWwSGRpNSueTrknAI5dsu7mONykt5qqGHnj3IB63TxGehi743txzpk2l7fHU4XO0MDMwnKn8KFPLJVmj+RlzJoiTiR869jncOwztXekNqhmtsgdLgFy3y0ClGaL1jZnOUSJ1+xaiCqqaFSViu5FOWeJf5UwCr/sFvxzgd7+9LX9luWz8Oe+S3BG2qJZA0Idvg5B/y0SqZDkdfOF4+dZDpXyeQ6Z6eZXJN1Os10Qt653htTZ6OZzK3GTjP9Htg7vWbae4ep00xniJ/Tayb9/UKnmc5VMw2G56eZzF2CTjOdjnfKOfwLaSav00y/KfZOr5nMJa/TTL8Ofg6pmaBY/Vmt+Lqt+kOgO/kf&lt;/diagram&gt;&lt;/mxfile&gt;" style="background-color: rgb(40, 54, 24);">
     <defs>
-        <clipPath id="mx-clip-284-30-132-30-0">
-            <rect x="284" y="30" width="132" height="30"/>
+        <clipPath id="mx-clip-324-60-132-30-0">
+            <rect x="324" y="60" width="132" height="30"/>
         </clipPath>
-        <clipPath id="mx-clip-284-60-132-30-0">
-            <rect x="284" y="60" width="132" height="30"/>
+        <clipPath id="mx-clip-324-90-132-30-0">
+            <rect x="324" y="90" width="132" height="30"/>
         </clipPath>
-        <clipPath id="mx-clip-284-90-132-30-0">
-            <rect x="284" y="90" width="132" height="30"/>
+        <clipPath id="mx-clip-324-120-132-30-0">
+            <rect x="324" y="120" width="132" height="30"/>
         </clipPath>
-        <clipPath id="mx-clip-284-120-132-30-0">
-            <rect x="284" y="120" width="132" height="30"/>
+        <clipPath id="mx-clip-324-150-132-30-0">
+            <rect x="324" y="150" width="132" height="30"/>
         </clipPath>
-        <clipPath id="mx-clip-4-260-172-30-0">
-            <rect x="4" y="260" width="172" height="30"/>
+        <clipPath id="mx-clip-44-290-172-30-0">
+            <rect x="44" y="290" width="172" height="30"/>
         </clipPath>
-        <clipPath id="mx-clip-4-290-172-60-0">
-            <rect x="4" y="290" width="172" height="60"/>
+        <clipPath id="mx-clip-44-320-172-60-0">
+            <rect x="44" y="320" width="172" height="60"/>
         </clipPath>
-        <clipPath id="mx-clip-4-350-172-30-0">
-            <rect x="4" y="350" width="172" height="30"/>
+        <clipPath id="mx-clip-44-380-172-30-0">
+            <rect x="44" y="380" width="172" height="30"/>
         </clipPath>
-        <clipPath id="mx-clip-264-260-172-30-0">
-            <rect x="264" y="260" width="172" height="30"/>
+        <clipPath id="mx-clip-304-290-172-30-0">
+            <rect x="304" y="290" width="172" height="30"/>
         </clipPath>
-        <clipPath id="mx-clip-264-290-172-60-0">
-            <rect x="264" y="290" width="172" height="60"/>
+        <clipPath id="mx-clip-304-320-172-60-0">
+            <rect x="304" y="320" width="172" height="60"/>
         </clipPath>
-        <clipPath id="mx-clip-264-350-172-30-0">
-            <rect x="264" y="350" width="172" height="30"/>
+        <clipPath id="mx-clip-304-380-172-30-0">
+            <rect x="304" y="380" width="172" height="30"/>
         </clipPath>
-        <clipPath id="mx-clip-524-260-172-30-0">
-            <rect x="524" y="260" width="172" height="30"/>
+        <clipPath id="mx-clip-564-290-172-30-0">
+            <rect x="564" y="290" width="172" height="30"/>
         </clipPath>
-        <clipPath id="mx-clip-524-290-172-60-0">
-            <rect x="524" y="290" width="172" height="60"/>
+        <clipPath id="mx-clip-564-320-172-60-0">
+            <rect x="564" y="320" width="172" height="60"/>
         </clipPath>
-        <clipPath id="mx-clip-524-350-172-30-0">
-            <rect x="524" y="350" width="172" height="30"/>
+        <clipPath id="mx-clip-564-380-172-30-0">
+            <rect x="564" y="380" width="172" height="30"/>
         </clipPath>
     </defs>
     <g>
-        <path d="M 280 75 L 100 75 Q 90 75 90 85 L 90 223.63" fill="none" stroke="#dda15e" stroke-miterlimit="10" pointer-events="stroke"/>
-        <path d="M 90 228.88 L 86.5 221.88 L 90 223.63 L 93.5 221.88 Z" fill="#dda15e" stroke="#dda15e" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="0" y="0" width="780" height="450" fill="#003300" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <path d="M 320 105 L 140 105 Q 130 105 130 115 L 130 253.63" fill="none" stroke="#dda15e" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 130 258.88 L 126.5 251.88 L 130 253.63 L 133.5 251.88 Z" fill="#dda15e" stroke="#dda15e" stroke-miterlimit="10" pointer-events="all"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 191px; margin-left: 91px;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 221px; margin-left: 131px;">
                         <div data-drawio-colors="color: #FEFAE0; background-color: #283618; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(254, 250, 224); line-height: 1.2; pointer-events: all; background-color: rgb(40, 54, 24); white-space: nowrap;">
                                 Class.new
@@ -58,17 +59,17 @@
                         </div>
                     </div>
                 </foreignObject>
-                <text x="91" y="194" fill="#FEFAE0" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                <text x="131" y="224" fill="#FEFAE0" font-family="Helvetica" font-size="11px" text-anchor="middle">
                     Class.new...
                 </text>
             </switch>
         </g>
-        <path d="M 350 150 L 350 223.63" fill="none" stroke="#dda15e" stroke-miterlimit="10" pointer-events="stroke"/>
-        <path d="M 350 228.88 L 346.5 221.88 L 350 223.63 L 353.5 221.88 Z" fill="#dda15e" stroke="#dda15e" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 390 180 L 390 253.63" fill="none" stroke="#dda15e" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 390 258.88 L 386.5 251.88 L 390 253.63 L 393.5 251.88 Z" fill="#dda15e" stroke="#dda15e" stroke-miterlimit="10" pointer-events="all"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 187px; margin-left: 351px;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 217px; margin-left: 391px;">
                         <div data-drawio-colors="color: #FEFAE0; background-color: #283618; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(254, 250, 224); line-height: 1.2; pointer-events: all; background-color: rgb(40, 54, 24); white-space: nowrap;">
                                 Class.new
@@ -80,17 +81,17 @@
                         </div>
                     </div>
                 </foreignObject>
-                <text x="351" y="190" fill="#FEFAE0" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                <text x="391" y="220" fill="#FEFAE0" font-family="Helvetica" font-size="11px" text-anchor="middle">
                     Class.new...
                 </text>
             </switch>
         </g>
-        <path d="M 420 75 L 600 75 Q 610 75 610 85 L 610 223.63" fill="none" stroke="#dda15e" stroke-miterlimit="10" pointer-events="stroke"/>
-        <path d="M 610 228.88 L 606.5 221.88 L 610 223.63 L 613.5 221.88 Z" fill="#dda15e" stroke="#dda15e" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 460 105 L 640 105 Q 650 105 650 115 L 650 253.63" fill="none" stroke="#dda15e" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 650 258.88 L 646.5 251.88 L 650 253.63 L 653.5 251.88 Z" fill="#dda15e" stroke="#dda15e" stroke-miterlimit="10" pointer-events="all"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 191px; margin-left: 611px;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 221px; margin-left: 651px;">
                         <div data-drawio-colors="color: #FEFAE0; background-color: #283618; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(254, 250, 224); line-height: 1.2; pointer-events: all; background-color: rgb(40, 54, 24); white-space: nowrap;">
                                 Class.new
@@ -102,126 +103,126 @@
                         </div>
                     </div>
                 </foreignObject>
-                <text x="611" y="194" fill="#FEFAE0" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                <text x="651" y="224" fill="#FEFAE0" font-family="Helvetica" font-size="11px" text-anchor="middle">
                     Class.new...
                 </text>
             </switch>
         </g>
-        <path d="M 280 30 L 280 0 L 420 0 L 420 30" fill="#bc6c25" stroke="#dda15e" stroke-miterlimit="10" pointer-events="all"/>
-        <path d="M 280 30 L 280 150 L 420 150 L 420 30" fill="none" stroke="#dda15e" stroke-miterlimit="10" pointer-events="none"/>
-        <path d="M 280 30 L 420 30" fill="none" stroke="#dda15e" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 320 60 L 320 30 L 460 30 L 460 60" fill="#bc6c25" stroke="#dda15e" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 320 60 L 320 180 L 460 180 L 460 60" fill="none" stroke="#dda15e" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 320 60 L 460 60" fill="none" stroke="#dda15e" stroke-miterlimit="10" pointer-events="none"/>
         <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="12px">
-            <text x="349.5" y="19.5">
+            <text x="389.5" y="49.5">
                 Class
             </text>
         </g>
-        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-284-30-132-30-0)" font-size="12px">
-            <text x="285.5" y="49.5">
+        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-324-60-132-30-0)" font-size="12px">
+            <text x="325.5" y="79.5">
                 initialize
             </text>
         </g>
-        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-284-60-132-30-0)" font-size="12px">
-            <text x="285.5" y="79.5">
+        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-324-90-132-30-0)" font-size="12px">
+            <text x="325.5" y="109.5">
                 instance methods
             </text>
         </g>
-        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-284-90-132-30-0)" font-size="12px">
-            <text x="285.5" y="102.5">
+        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-324-120-132-30-0)" font-size="12px">
+            <text x="325.5" y="132.5">
                 attr_accessors define
             </text>
-            <text x="285.5" y="116.5">
+            <text x="325.5" y="146.5">
                 setters and getters
             </text>
         </g>
-        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-284-120-132-30-0)" font-size="12px">
-            <text x="285.5" y="139.5">
+        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-324-150-132-30-0)" font-size="12px">
+            <text x="325.5" y="169.5">
                 self refers to the Class
             </text>
         </g>
-        <path d="M 0 260 L 0 230 L 180 230 L 180 260" fill="#bc6c25" stroke="#dda15e" stroke-miterlimit="10" pointer-events="none"/>
-        <path d="M 0 260 L 0 380 L 180 380 L 180 260" fill="none" stroke="#dda15e" stroke-miterlimit="10" pointer-events="none"/>
-        <path d="M 0 260 L 180 260" fill="none" stroke="#dda15e" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 40 290 L 40 260 L 220 260 L 220 290" fill="#bc6c25" stroke="#dda15e" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 40 290 L 40 410 L 220 410 L 220 290" fill="none" stroke="#dda15e" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 40 290 L 220 290" fill="none" stroke="#dda15e" stroke-miterlimit="10" pointer-events="none"/>
         <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="12px">
-            <text x="89.5" y="249.5">
+            <text x="129.5" y="279.5">
                 Instance
             </text>
         </g>
-        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-4-260-172-30-0)" font-size="12px">
-            <text x="5.5" y="279.5">
+        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-44-290-172-30-0)" font-size="12px">
+            <text x="45.5" y="309.5">
                 has its own instance variables
             </text>
         </g>
-        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-4-290-172-60-0)" font-size="12px">
-            <text x="5.5" y="310.5">
+        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-44-320-172-60-0)" font-size="12px">
+            <text x="45.5" y="340.5">
                 can respond to instance
             </text>
-            <text x="5.5" y="324.5">
+            <text x="45.5" y="354.5">
                 methods defined in its parent
             </text>
-            <text x="5.5" y="338.5">
+            <text x="45.5" y="368.5">
                 class
             </text>
         </g>
-        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-4-350-172-30-0)" font-size="12px">
-            <text x="5.5" y="369.5">
+        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-44-380-172-30-0)" font-size="12px">
+            <text x="45.5" y="399.5">
                 self refers to this instance
             </text>
         </g>
-        <path d="M 260 260 L 260 230 L 440 230 L 440 260" fill="#bc6c25" stroke="#dda15e" stroke-miterlimit="10" pointer-events="none"/>
-        <path d="M 260 260 L 260 380 L 440 380 L 440 260" fill="none" stroke="#dda15e" stroke-miterlimit="10" pointer-events="none"/>
-        <path d="M 260 260 L 440 260" fill="none" stroke="#dda15e" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 300 290 L 300 260 L 480 260 L 480 290" fill="#bc6c25" stroke="#dda15e" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 300 290 L 300 410 L 480 410 L 480 290" fill="none" stroke="#dda15e" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 300 290 L 480 290" fill="none" stroke="#dda15e" stroke-miterlimit="10" pointer-events="none"/>
         <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="12px">
-            <text x="349.5" y="249.5">
+            <text x="389.5" y="279.5">
                 Instance
             </text>
         </g>
-        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-264-260-172-30-0)" font-size="12px">
-            <text x="265.5" y="279.5">
+        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-304-290-172-30-0)" font-size="12px">
+            <text x="305.5" y="309.5">
                 has its own instance variables
             </text>
         </g>
-        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-264-290-172-60-0)" font-size="12px">
-            <text x="265.5" y="310.5">
+        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-304-320-172-60-0)" font-size="12px">
+            <text x="305.5" y="340.5">
                 can respond to instance
             </text>
-            <text x="265.5" y="324.5">
+            <text x="305.5" y="354.5">
                 methods defined in its parent
             </text>
-            <text x="265.5" y="338.5">
+            <text x="305.5" y="368.5">
                 class
             </text>
         </g>
-        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-264-350-172-30-0)" font-size="12px">
-            <text x="265.5" y="369.5">
+        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-304-380-172-30-0)" font-size="12px">
+            <text x="305.5" y="399.5">
                 self refers to this instance
             </text>
         </g>
-        <path d="M 520 260 L 520 230 L 700 230 L 700 260" fill="#bc6c25" stroke="#dda15e" stroke-miterlimit="10" pointer-events="none"/>
-        <path d="M 520 260 L 520 380 L 700 380 L 700 260" fill="none" stroke="#dda15e" stroke-miterlimit="10" pointer-events="none"/>
-        <path d="M 520 260 L 700 260" fill="none" stroke="#dda15e" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 560 290 L 560 260 L 740 260 L 740 290" fill="#bc6c25" stroke="#dda15e" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 560 290 L 560 410 L 740 410 L 740 290" fill="none" stroke="#dda15e" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 560 290 L 740 290" fill="none" stroke="#dda15e" stroke-miterlimit="10" pointer-events="none"/>
         <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="12px">
-            <text x="609.5" y="249.5">
+            <text x="649.5" y="279.5">
                 Instance
             </text>
         </g>
-        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-524-260-172-30-0)" font-size="12px">
-            <text x="525.5" y="279.5">
+        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-564-290-172-30-0)" font-size="12px">
+            <text x="565.5" y="309.5">
                 has its own instance variables
             </text>
         </g>
-        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-524-290-172-60-0)" font-size="12px">
-            <text x="525.5" y="310.5">
+        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-564-320-172-60-0)" font-size="12px">
+            <text x="565.5" y="340.5">
                 can respond to instance
             </text>
-            <text x="525.5" y="324.5">
+            <text x="565.5" y="354.5">
                 methods defined in its parent
             </text>
-            <text x="525.5" y="338.5">
+            <text x="565.5" y="368.5">
                 class
             </text>
         </g>
-        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-524-350-172-30-0)" font-size="12px">
-            <text x="525.5" y="369.5">
+        <g fill="#FEFAE0" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-564-380-172-30-0)" font-size="12px">
+            <text x="565.5" y="399.5">
                 self refers to this instance
             </text>
         </g>
