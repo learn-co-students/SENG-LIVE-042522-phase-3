@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require_relative "../config/environment"
+
+start_cli
+print_menu_options
+loop do 
+  print_menu_options
+  handle_choice(ask_for_input)
+end
