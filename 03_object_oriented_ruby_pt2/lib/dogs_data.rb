@@ -1,6 +1,6 @@
 # ✅ The information in the $dogs variable is now going to be stored within the Dog class, so we don't need to store it in two places
 # So, let's remove the map at the end of the file so that we still have access to the data within these hashes for the purpose of creating dog instances using the Dog class
-$dogs = [
+[
   {
     name: "Olivia",	
     age: "4 years",
@@ -116,10 +116,7 @@ $dogs = [
     image_url: "https://res.cloudinary.com/dnocv6uwb/image/upload/v1629822337/sn-color_qesmhx.jpg"
   }
 ].map do |dog_hash|
-  Dog.new(
-    dog_hash[:name],
-    dog_hash[:age],
-    dog_hash[:breed],
-    dog_hash[:image_url]
+  Dog.create(
+    dog_hash
   )
 end

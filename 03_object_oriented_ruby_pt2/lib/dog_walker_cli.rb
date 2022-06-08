@@ -64,8 +64,12 @@ def add_dog(dogs)
 
   # ✅ Rework the code below to use the Dog class's create method
 
-  dog = Dog.new(name, age, breed, image_url)
-  dogs << dog
+  dog = Dog.create({
+    name: name,
+    age: age,
+    breed: breed,
+    image_url: image_url
+  })
   dog.print
 end
 
@@ -78,19 +82,19 @@ end
 # handle the choice that a user makes by calling the appropriate method or printing an error message if the user types something other than one of our specified options
 def handle_choice(choice)
   if choice == "1"
-    list_dogs($dogs)
+    list_dogs(Dog.all)
   elsif choice == "2"
-    add_dog($dogs)
+    add_dog(Dog.all)
   elsif choice == "3"
-    walk_dog($dogs)
+    walk_dog(Dog.all)
   elsif choice == "4"
-    feed_dog($dogs)
+    feed_dog(Dog.all)
   elsif choice == "5"
     # ✅ list dogs that need walking
-
+    list_dogs(Dog.needs_walking)
   elsif choice == "6"
     # ✅ list dogs that are hungry
-
+    list_dogs(Dog.hungry)
   elsif choice == "debug"
     binding.pry
   else
