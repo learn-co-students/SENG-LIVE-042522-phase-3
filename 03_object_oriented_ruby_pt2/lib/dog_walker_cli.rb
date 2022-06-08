@@ -9,15 +9,17 @@ def print_menu_options
   puts "  2. Add a dog"
   puts "  3. To walk a dog"
   puts "  4. To feed a dog"
+  puts "  5. To view dogs that need walking"
+  puts "  6. To view dogs that are hungry"
   puts "Please choose the number matching your choice."
   puts 'At any time, type "exit" to leave the program'
 end
 
-# `ask_for_choice` prompts the user for input
+# `ask_for_input` prompts the user for input
 # if the user types "exit" we'll print a message thanking them
 # for using the CLI and invoke exit to terminate the program
 # otherwise, return whatever the user typed in
-def ask_for_choice
+def ask_for_input
   input = gets.chomp
   if input == "exit"
     puts "Thanks for using the Dog Walker CLI!".green
@@ -52,13 +54,13 @@ end
 # print the newly saved dog (by invoking dog.print)
 def add_dog(dogs)
   print "What's the dog's name? "
-  name = ask_for_choice
+  name = ask_for_input
   print "What's the dog's age? "
-  age = ask_for_choice
+  age = ask_for_input
   print "What's the dog's breed? "
-  breed = ask_for_choice
+  breed = ask_for_input
   print "What's the dog's image url? "
-  image_url = ask_for_choice
+  image_url = ask_for_input
 
   # ✅ Rework the code below to use the Dog class's create method
 
@@ -70,8 +72,8 @@ end
 
 # ✅ Refactor: 
 # 1. We're going to remove all references to $dogs within this method because the Dog class is now taking ownership of managing collections of dogs
-# 2. within the logic for handling choice 3 for walking a dog, we'll pass in only the dogs that need a walk (instead of all the dogs)
-# 3. within the logic for handling choice 4 for feeding a dog, we'll pass in only the dogs that are hungry (instead of all the dogs)
+# 2. within the logic for handling choice 5 for dogs that need walking, we'll list only dogs that need a walk
+# 3. within the logic for handling choice 6 for dogs that are hungry, we'll list only dogs that are hungry
 
 # handle the choice that a user makes by calling the appropriate method or printing an error message if the user types something other than one of our specified options
 def handle_choice(choice)
@@ -83,6 +85,12 @@ def handle_choice(choice)
     walk_dog($dogs)
   elsif choice == "4"
     feed_dog($dogs)
+  elsif choice == "5"
+    # ✅ list dogs that need walking
+
+  elsif choice == "6"
+    # ✅ list dogs that are hungry
+
   elsif choice == "debug"
     binding.pry
   else
@@ -90,8 +98,6 @@ def handle_choice(choice)
     puts "Please try again."
   end
 end
-
-# ✅ Refactor
 
 # `choose_dog_from_collection` will:
 #  - accept an array of dog instances as an argument
@@ -110,7 +116,7 @@ def choose_dog_from_collection(dogs)
   # this code converts the number typed by the user and stored as a string
   # to an integer and then subtracts 1 to get the corresponding index in
   # the dogs array
-  index = ask_for_choice.to_i - 1
+  index = ask_for_input.to_i - 1
   # next we check if we got a valid choice and if not, we'll show an error 
   # and ask the user to choose again by invoking the method again.
   # we add index >= 0 to our condition because .to_i will return 0 if passed
