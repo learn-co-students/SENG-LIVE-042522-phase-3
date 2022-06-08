@@ -2,20 +2,20 @@ class Dog
   # Class methods will be defined above initialize by convention
   # and instance methods will be defined below initialize
 
-  # ✅ We want our Dog class to store all of the Dogs we have saved so far
+  # ✅ We want our Dog class to store all of the Dogs we will save
 
 
 
-  # ✅ We want to be able to access the current state of the stored dogs
-
-
-
-  # ✅ We want to be able to view all dogs that are hungry
+  # ✅ We want to be able to access the current state of the stored (saved) dogs
 
 
 
   # ✅ We want to be able to view all dogs that need a walk
-
+  
+  
+  
+  # ✅ We want to be able to view all dogs that are hungry
+  
   
 
 
