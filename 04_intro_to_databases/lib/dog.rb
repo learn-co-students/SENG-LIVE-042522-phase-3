@@ -165,7 +165,7 @@ class Dog
   # Return true if the dog hasn't been walked (that we know of) or their last walk was longer than a set amount of time in the past, otherwise return false.
   def needs_a_walk?
     if last_walked_at
-      !last_walked_at.between?(10.seconds.ago, Time.now)
+      !last_walked_at.between?(4.hours.ago, Time.now)
     else
       true
     end
@@ -175,7 +175,7 @@ class Dog
   # Return true if the dog hasn't been fed (that we know of) or their last feeding was longer than a set amount of time in the past, otherwise return false
   def hungry?
     if last_fed_at
-      !last_fed_at.between?(15.seconds.ago, Time.now)
+      !last_fed_at.between?(6.hours.ago, Time.now)
     else
       true
     end
