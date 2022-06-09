@@ -34,3 +34,8 @@ DB.results_as_hash = true
 # method) it will be accessible to us after the require_all
 # below
 require_all "lib"
+
+def reload
+  load "lib/dog_walker_cli.rb"
+  load "lib/dog.rb"
+end

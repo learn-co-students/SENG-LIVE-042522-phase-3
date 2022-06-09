@@ -2,7 +2,16 @@
 presentation:
   enableSpeakerNotes: true
   showNotes: false
+  width: 1200
+  height: 900
 ---
+
+<style>
+  table {
+    width: 100%;
+    overflow: scroll;
+  }
+</style>
 
 # Intro to Databases
 
@@ -22,7 +31,6 @@ presentation:
 - Basic SQL queries
 - Primary Keys
 - Foreign Keys
-Another concept
 
 
 

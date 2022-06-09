@@ -63,8 +63,8 @@ class Dog
     @birthdate = DateTime.parse(birthdate)
     @breed = breed
     @image_url = image_url
-    @last_walked_at = last_walked_at && DateTime.parse(last_walked_at).change(offset: '-0700') # modify this for whatever timezone you're in
-    @last_fed_at = last_fed_at && DateTime.parse(last_fed_at).change(offset: '-0700') # modify this for whatever timezone you're in
+    @last_walked_at = last_walked_at && Time.parse(last_walked_at) # only parse this as a time if it has a value
+    @last_fed_at = last_fed_at && Time.parse(last_fed_at) # only parse this as a time if it has a value
   end
 
   # The save method will insert a new row in the database for dogs that don't have an id and update the existing row in the database if the dog does have an id.
