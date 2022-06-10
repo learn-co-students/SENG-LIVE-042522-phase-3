@@ -150,7 +150,7 @@ end
 
 def list_walks_for_dog
   puts "Which dog's past walks would you like to view?".cyan
-  dog = choose_dog_from_collection(dogs)
+  dog = choose_dog_from_collection(Dog.all)
   puts "Recent walks for #{dog.name}:".cyan
   dog.walks.order(time: :desc).each do |walk|
     puts "time: #{walk.time.strftime('%A, %m/%d %l:%M %p')}"
@@ -159,7 +159,7 @@ end
 
 def list_feedings_for_dog
   puts "Which dog's past feedings would you like to view?".cyan
-  dog = choose_dog_from_collection(dogs)
+  dog = choose_dog_from_collection(Dog.all)
   puts "Recent feedings for #{dog.name}:".cyan
   dog.feedings.order(time: :desc).each do |feeding|
     puts "time: #{feeding.time.strftime('%A, %m/%d %l:%M %p')}"
