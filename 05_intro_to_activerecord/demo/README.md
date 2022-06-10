@@ -226,25 +226,26 @@ As with all methods, the reason you define them is so you can call them. So, if 
 Once we have our migrations and association methods set up, we can add some seeds to our database. This will ensure that we don't start from scratch when we run our CLI app.
 
 ```rb
+# if I'm not using rake db:seed:replant I can do these calls to destroy_all up front
 Walk.destroy_all
 Feeding.destroy_all
 Dog.destroy_all
 
 lennon = Dog.create(
   name: "Lennon", 
-  age: "1 year", 
+  age: "2020-08-31", 
   breed: "Pomeranian", 
   image_url: "https://res.cloudinary.com/dnocv6uwb/image/upload/v1609370267/dakota-and-lennon-square-compressed_hoenfo.jpg"
 )
 olivia = Dog.create(
   name: "Olivia",	
-  birthdate: Date.new(2018, 03, 31),
+  birthdate: "2020-03-31",
   breed:	"Terrier",
   image_url: "https://res.cloudinary.com/dnocv6uwb/image/upload/v1631229064/zx6CPsp_d_utkmww.webp"
 )
 
-lennon.walks.create(time: 4.hours.ago)
-lennon.walks.create(time: 6.hours.ago)
+lennon.walks.create(time: 7.hours.ago)
+lennon.walks.create(time: 10.hours.ago)
 
 lennon.feedings.create(time: 30.minutes.ago)
 
@@ -253,3 +254,11 @@ olivia.feedings.create(time: 2.hours.ago)
 ```
 
 I've got this code in the `db/seeds.rb` file commented out currently, so we'll want to uncomment it so we can run it and get a couple of dogs in the database as well as some walks and feedings.
+
+If we run `rake db:seed:replant` all records will be deleted before we seed the database again, but the primary key counters will not be reset to 1. If we want to [reset our primary key counters to 1](https://railsexamples.com/reset_pk_sequence/), this code will do it:
+
+```rb
+ActiveRecord::Base.connection.tables.each do |t|
+  ActiveRecord::Base.connection.reset_pk_sequence!(t)
+end
+```
