@@ -37,13 +37,13 @@ end
 # print the newly saved dog (by invoking dog.print)
 def add_dog
   print "What's the dog's name? "
-  name = ask_for_choice
+  name = ask_for_input
   print "What's the dog's birthday? (YYYY-MM-DD) "
-  birthdate = ask_for_choice
+  birthdate = ask_for_input
   print "What's the dog's breed? "
-  breed = ask_for_choice
+  breed = ask_for_input
   print "What's the dog's image url? "
-  image_url = ask_for_choice
+  image_url = ask_for_input
 
 
   dog = Dog.create(
@@ -58,7 +58,7 @@ end
 def dog_info
   list_dogs
   print_dog_interaction_choices
-  input = ask_for_choice
+  input = ask_for_input
   until input == "back"
     if input == "1" 
       feed_dog
@@ -76,7 +76,7 @@ def dog_info
       puts "Whoops! I didn't understand your choice".red
     end
     print_dog_interaction_choices
-    input = ask_for_choice
+    input = ask_for_input
   end
 end
 
@@ -99,11 +99,11 @@ def print_dog_interaction_choices
   puts "  exit to leave the program".cyan
 end
 
-# `ask_for_choice` prompts the user for input
+# `ask_for_input` prompts the user for input
 # if the user types "exit" we'll print a message thanking them
 # for using the CLI and invoke exit to terminate the program
 # otherwise, return whatever the user typed in
-def ask_for_choice
+def ask_for_input
   input = gets.chomp
   if input == "exit"
     puts "Thanks for using the Dog Walker CLI!".green
