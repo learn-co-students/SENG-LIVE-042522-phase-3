@@ -1,6 +1,7 @@
 class Dog < ActiveRecord::Base
   # ✅ Ensure a many to many relationship between dogs and walks
-  has_many :walks
+  has_many :dog_walks
+  has_many :walks, through: :dog_walks
   has_many :feedings
 
   # Class methods will be defined above instance methods by convention
@@ -9,17 +10,22 @@ class Dog < ActiveRecord::Base
   # ✅ Refactor: Use AR Query methods to return hungry dogs
   # return all of the dogs who are hungry
   def self.hungry
-    self.all.filter do |dog|
-      dog.hungry?
-    end
+    # we want all dogs that have NOT been fed in the last 6 hours 
+    # - We need to get all of the dogs that HAVE been fed in the last 6 hours
+    # - Get all the OTHER dogs
+    fed_dog_ids = self.includes(:feedings).where(feedings: {
+      time: 6.hours.ago..Time.now
+    }).ids
+    self.where.not(id: fed_dog_ids)
   end
   
   # ✅ Refactor: Use AR query methods to return restless dogs
   # return all of the dogs who need a walk
   def self.needs_walking
-    self.all.filter do |dog|
-      dog.needs_a_walk?
-    end
+    walked_dog_ids = self.includes(:walks).where(walks: {
+      time: 4.hours.ago..Time.now
+    }).ids
+    self.where.not(id: walked_dog_ids)
   end
   
 
@@ -44,7 +50,6 @@ class Dog < ActiveRecord::Base
   # we want to be able to take a dog on a walk and track when they were last walked
   def walk
     now = DateTime.now
-    self.last_walked_at = now
     self.walks.create(time: now)
   end
 
@@ -52,17 +57,21 @@ class Dog < ActiveRecord::Base
   # we want to be able to feed a dog and track when they were last fed
   def feed
     now = DateTime.now
-    self.last_fed_at = now
     self.feedings.create(time: now)
   end
 
   # ✅ We'll be removing the last_walked_at and last_fed_at columns, so we'll need to add methods for those.
   
   # ✅ last_walked_at will query the related walks, order them in descending order by time and get the time of the first if it exists
+  def last_walked_at
+    self.walks.order(time: :desc).first&.time
+  end
 
   
   # ✅ last_fed_at will query the related feedings, order them in descending order by time and get the time of the first if it exists
-
+  def last_fed_at
+    self.feedings.order(time: :desc).first&.time
+  end
 
   # We want to know if a dog needs a walk. 
   # Return true if the dog hasn't been walked (that we know of) or their last walk was longer than a set amount of time in the past, otherwise return false.
