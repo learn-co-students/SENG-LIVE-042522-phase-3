@@ -1,7 +1,29 @@
 class WalksController < ApplicationController
 
   get "/walks" do 
-    binding.pry
+    if params.include?("include_dogs")
+      Walk.all.to_json(
+        methods: [:formatted_time],
+        include: :dogs
+      )
+    else
+      Walk.all.to_json(
+        methods: [:formatted_time]
+      )
+    end
+  end
+
+  get "/walks/recent" do 
+    Walk.recent.to_json(
+      methods: [:formatted_time]
+    )
+  end
+
+  get "/walks/:id" do 
+    walk = Walk.find(params[:id])
+    walk.to_json(
+      methods: [:formatted_time]
+    )
   end
 
   private 

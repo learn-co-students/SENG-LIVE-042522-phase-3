@@ -1,6 +1,22 @@
 class DogsController < ApplicationController
   
-  
+  get "/dogs" do 
+    puts params.include?("include_dog_walks")
+    if params.include?("include_dog_walks")
+      Dog.all.to_json(
+        methods: [:age],
+        include: {
+          dog_walks: {
+            methods: [:formatted_time]
+          }
+        }
+      )
+    else
+      Dog.all.to_json(
+        methods: [:age]
+      )
+    end
+  end
 
   private 
 

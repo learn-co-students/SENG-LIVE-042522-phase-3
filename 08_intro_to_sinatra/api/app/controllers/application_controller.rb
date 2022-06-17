@@ -4,8 +4,8 @@ class ApplicationController < Sinatra::Base
   # method "URL" do
     
   # end
-  get "/" do 
-
+  get "/hi" do 
+    { hello: "world" }.to_json
   end
 
 end
