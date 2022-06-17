@@ -1,5 +1,8 @@
 class WalksController < ApplicationController
 
+  get "/walks" do 
+    binding.pry
+  end
 
   private 
 

@@ -6,8 +6,8 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta
-            name="Dog Walker API documentation"
-            content="Documentation for the Dog Walker Sinatra API"
+            name="description"
+            content="Documentation for the Kittn API"
         >
     <title>API Reference</title>
 
@@ -295,7 +295,7 @@
     </script>
   </head>
 
-  <body class="index" data-languages="[&quot;javascript&quot;,&quot;shell&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;javascript&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -305,8 +305,8 @@
     <div class="toc-wrapper">
       <img src="images/logo-1e815a84.png" class="logo" alt="" />
         <div class="lang-selector">
-              <a href="#" data-language-name="javascript">javascript</a>
               <a href="#" data-language-name="shell">shell</a>
+              <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -325,42 +325,13 @@
                   <li>
                     <a href="#get-a-specific-dog" class="toc-h2 toc-link" data-title="Get a Specific Dog">Get a Specific Dog</a>
                   </li>
-                  <li>
-                    <a href="#create-a-new-dog" class="toc-h2 toc-link" data-title="Create a new Dog">Create a new Dog</a>
-                  </li>
-                  <li>
-                    <a href="#update-a-specific-dog" class="toc-h2 toc-link" data-title="Update a specific Dog">Update a specific Dog</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-specific-dog" class="toc-h2 toc-link" data-title="Delete a Specific Dog">Delete a Specific Dog</a>
-                  </li>
               </ul>
           </li>
           <li>
             <a href="#walks" class="toc-h1 toc-link" data-title="Walks">Walks</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-walks" class="toc-h2 toc-link" data-title="Get all walks">Get all walks</a>
-                  </li>
-                  <li>
-                    <a href="#create-a-new-walk" class="toc-h2 toc-link" data-title="Create a new Walk">Create a new Walk</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-specific-walk" class="toc-h2 toc-link" data-title="Delete a specific Walk">Delete a specific Walk</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#dogwalks" class="toc-h1 toc-link" data-title="DogWalks">DogWalks</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#creating-a-new-dogwalk" class="toc-h2 toc-link" data-title="Creating a new DogWalk">Creating a new DogWalk</a>
-                  </li>
-                  <li>
-                    <a href="#update-a-specific-dogwalk" class="toc-h2 toc-link" data-title="Update a specific DogWalk">Update a specific DogWalk</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-specific-dogwalk" class="toc-h2 toc-link" data-title="Delete a specific DogWalk">Delete a specific DogWalk</a>
+                    <a href="#get-all-walks" class="toc-h2 toc-link" data-title="Get All Walks">Get All Walks</a>
                   </li>
               </ul>
           </li>
@@ -369,6 +340,7 @@
           </li>
       </ul>
         <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
             <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
         </ul>
     </div>
@@ -379,10 +351,10 @@
 <p>Welcome to the Dog Walker API! You can use our API to access Dog Walker API endpoints, which can get information on various dogs, their walks and feedings stored in our database.</p>
 
 <p>We have language bindings in JavaScript (fetch) and CURL! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-<h1 id='dogs'>Dogs</h1><h2 id='get-all-dogs'>Get All Dogs</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://localhost:9292/dogs</span><span class="dl">'</span><span class="p">)</span>
+<h1 id='dogs'>Dogs</h1><h2 id='get-all-dogs'>Get All Dogs</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://localhost:9292/dogs"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://localhost:9292/dogs</span><span class="dl">'</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://localhost:9292/dogs"</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -412,7 +384,7 @@
 <tr>
 <td>include_dog_walks</td>
 <td>false</td>
-<td>If set to true, the result will also include this dog&#39;s dog_walks. Each will then look like the JSON displayed in the documentation for the <code>/dogs/:id</code> endpoint</td>
+<td>If set to true, the result will also include this dog&#39;s dog_walks. Each will then look like the JSON displayed in the documentation for the /dogs/:id endpoint</td>
 </tr>
 <tr>
 <td>breed</td>
@@ -420,10 +392,10 @@
 <td>If the breed parameter is included, the result will include only dogs matching the provided breed. Otherwise, all dogs will be included.</td>
 </tr>
 </tbody></table>
-<h2 id='get-a-specific-dog'>Get a Specific Dog</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://localhost:9292/dogs/1</span><span class="dl">'</span><span class="p">)</span>
+<h2 id='get-a-specific-dog'>Get a Specific Dog</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://localhost:9292/dogs/1"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://localhost:9292/dogs/1</span><span class="dl">'</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://localhost:9292/dogs/1"</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -461,175 +433,36 @@
 <td>The ID of the dog to retrieve</td>
 </tr>
 </tbody></table>
-<h2 id='create-a-new-dog'>Create a new Dog</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">http://localhost:9292/dogs</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
-  <span class="na">method</span><span class="p">:</span> <span class="dl">"</span><span class="s2">POST</span><span class="dl">"</span><span class="p">,</span>
-  <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
-    <span class="dl">"</span><span class="s2">Content-Type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span>
-  <span class="p">},</span>
-  <span class="na">body</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
-    <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Baby Lennon</span><span class="dl">"</span><span class="p">,</span>
-    <span class="dl">"</span><span class="s2">birthdate</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2020-08-31</span><span class="dl">"</span><span class="p">,</span>
-    <span class="dl">"</span><span class="s2">breed</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Pomeranian</span><span class="dl">"</span><span class="p">,</span>
-    <span class="dl">"</span><span class="s2">image_url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://res.cloudinary.com/dnocv6uwb/image/upload/v1609370238/dakota-and-lennon-square-medium-compressed_qpwki6.jpg</span><span class="dl">"</span>
-  <span class="p">})</span>
-<span class="p">})</span>
+<h1 id='walks'>Walks</h1><h2 id='get-all-walks'>Get All Walks</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://localhost:9292/walks</span><span class="dl">'</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
- <span class="nt">-d</span> <span class="s1">'{
-    "name": "Baby Lennon",
-    "birthdate": "2020-08-31",
-    "breed": "Pomeranian",
-    "image_url": "https://res.cloudinary.com/dnocv6uwb/image/upload/v1609370238/dakota-and-lennon-square-medium-compressed_qpwki6.jpg"
-  }'</span> <span class="se">\</span>
- http://localhost:9292/dogs
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://localhost:9292/walks"</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Baby Lennon"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"birthdate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-08-31"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pomeranian"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://res.cloudinary.com/dnocv6uwb/image/upload/v1609370238/dakota-and-lennon-square-medium-compressed_qpwki6.jpg"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"age"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 year"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"dog_walks"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
-</span><span class="p">}</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-09-09T23:59:18.611Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-09-09T23:59:18.611Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"formatted_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Thursday, 09/09/21  6:59 PM"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-18T17:12:42.149Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-18T17:12:42.149Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"formatted_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Monday, 04/18/22 10:12 AM"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
 </span></code></pre></div>
-<p>This endpoint creates a new dog and responds with it.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>POST http://localhost:9292/dogs</code></p>
-<h3 id='request-body-parameters'>Request Body Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name (string)</td>
-<td>The new dog&#39;s name</td>
-</tr>
-<tr>
-<td>birthdate (string)</td>
-<td>The new dog&#39;s birthdate in &quot;YYYY-MM-DD&quot; format</td>
-</tr>
-<tr>
-<td>breed (string)</td>
-<td>The new dog&#39;s breed</td>
-</tr>
-<tr>
-<td>image_url (string)</td>
-<td>an image_url for the new dog</td>
-</tr>
-</tbody></table>
-<h2 id='update-a-specific-dog'>Update a specific Dog</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">http://localhost:9292/dogs/20</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
-  <span class="na">method</span><span class="p">:</span> <span class="dl">"</span><span class="s2">PATCH</span><span class="dl">"</span><span class="p">,</span>
-  <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
-    <span class="dl">"</span><span class="s2">Content-Type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span>
-  <span class="p">},</span>
-  <span class="na">body</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
-    <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Baby Lennon is the cutest</span><span class="dl">"</span>
-  <span class="p">})</span>
-<span class="p">})</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> PATCH <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
- <span class="nt">-d</span> <span class="s1">'{
-    "name": "Baby Lennon is the cutest"
-  }'</span> <span class="se">\</span>
- http://localhost:9292/dogs/20
-</code></pre></div>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>If you&#39;d like to include dogs</p>
 </blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Baby Lennon is the cutest"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"birthdate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-08-31"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pomeranian"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://res.cloudinary.com/dnocv6uwb/image/upload/v1609370267/dakota-and-lennon-square-compressed_hoenfo.jpg"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"age"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 year"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"dog_walks"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint updates a specific dog in the database and responds with the updated version of the dog&#39;s information.</p>
-<h3 id='http-request-4'>HTTP Request</h3>
-<p><code>PATCH /dogs/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the dog to update</td>
-</tr>
-</tbody></table>
-<h3 id='request-body-parameters-2'>Request Body Parameters</h3>
-<p>All parameters below are optional, only included parameters will update the saved values for this dog.</p>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name (string)</td>
-<td>The new name of the dog</td>
-</tr>
-<tr>
-<td>birthdate (string in &quot;YYYY-MM-DD&quot; format)</td>
-<td>The new birthdate of the dog</td>
-</tr>
-<tr>
-<td>breed (string)</td>
-<td>The new breed of the dog</td>
-</tr>
-<tr>
-<td>image_url (string)</td>
-<td>The new image_url of the dog</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-dog'>Delete a Specific Dog</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://localhost:9292/dogs/1</span><span class="dl">'</span><span class="p">)</span>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://localhost:9292/walks?include_dogs</span><span class="dl">'</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://localhost:9292/dogs/1"</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Baby Lennon"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"birthdate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-08-31"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pomeranian"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://res.cloudinary.com/dnocv6uwb/image/upload/v1609370238/dakota-and-lennon-square-medium-compressed_qpwki6.jpg"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint deletes a specific dog and returns its JSON. If undo functionality is desired on the frontend, this JSON can be used to create a new dog with the same attributes as the original.</p>
-<h3 id='http-request-5'>HTTP Request</h3>
-<p><code>DELETE http://localhost:9292/dogs/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-3'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the dog to delete</td>
-</tr>
-</tbody></table>
-<h1 id='walks'>Walks</h1><h2 id='get-all-walks'>Get all walks</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://localhost:9292/walks</span><span class="dl">'</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl http://localhost:9292/walks
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://localhost:9292/walks?include_dogs"</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -667,10 +500,67 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div>
+<blockquote>
+<p>Or only retrieve recent walks</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://localhost:9292/walks?recent</span><span class="dl">'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://localhost:9292/walks?recent"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-18T17:12:42.149Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-18T17:12:42.149Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"formatted_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Monday, 04/18/22 10:12 AM"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dogs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Olivia"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://res.cloudinary.com/dnocv6uwb/image/upload/v1631229064/zx6CPsp_d_utkmww.webp"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Winter"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://res.cloudinary.com/dnocv6uwb/image/upload/v1629822144/561229495_lldnll.jpg"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CeCe"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://res.cloudinary.com/dnocv6uwb/image/upload/v1629821709/ee7eee7ee62c9c2b053e65dc9c9e1a55_iwjweh.jpg"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>These can also be combined with <code>?recent&amp;include_dogs</code></p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://localhost:9292/walks?recent&amp;include_dogs</span><span class="dl">'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://localhost:9292/walks?recent&amp;include_dogs"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-18T17:12:42.149Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-18T17:12:42.149Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"formatted_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Monday, 04/18/22 10:12 AM"</span><span class="p">,</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
 <p>This endpoint retrieves all walks stored in our database. It also accepts a boolean parameter for recent which will configure the endpoint to respond with only walks in the last 4 hours if added.</p>
-<h3 id='http-request-6'>HTTP Request</h3>
+<h3 id='http-request-3'>HTTP Request</h3>
 <p><code>GET http://localhost:9292/walks</code></p>
-<h3 id='url-parameters-4'>URL Parameters</h3>
+<h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -681,257 +571,20 @@
 <tr>
 <td>recent (boolean)</td>
 <td>false</td>
-<td>If true, responds with all walks within the last 4 hours, if false, responds with all walks</td>
-</tr>
-</tbody></table>
-<h2 id='create-a-new-walk'>Create a new Walk</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">http://localhost:9292/walks</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
-  <span class="na">method</span><span class="p">:</span> <span class="dl">"</span><span class="s2">POST</span><span class="dl">"</span><span class="p">,</span>
-  <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
-    <span class="dl">"</span><span class="s2">Content-Type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span>
-  <span class="p">},</span>
-  <span class="na">body</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
-    <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2022-05-31T11:52</span><span class="dl">"</span><span class="p">,</span>
-    <span class="dl">"</span><span class="s2">dog_ids</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
-  <span class="p">})</span>
-<span class="p">})</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
- <span class="nt">-d</span> <span class="s1">'{
-    "time": "2022-05-31T11:52",
-    "dog_ids": [1,2]
-  }'</span> <span class="se">\</span>
- http://localhost:9292/walks
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-05-30T18:53:10.692Z"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-05-30T18:53:10.692Z"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"formatted_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tuesday, 05/31/22 11:52 AM"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"dogs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Olivia"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://res.cloudinary.com/dnocv6uwb/image/upload/v1631229064/zx6CPsp_d_utkmww.webp"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Molly"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://res.cloudinary.com/dnocv6uwb/image/upload/v1631229038/EEE90-E50-25-F0-4-DF0-98-B2-0-E0-B6-F9-BAA89_menwgg.jpg"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint creates a new walk, associates existing dogs with it by their ids and responds with information about the walk and all associated dogs.</p>
-<h3 id='http-request-7'>HTTP Request</h3>
-<p><code>POST /walks</code></p>
-<h3 id='request-body-parameters-3'>Request Body Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>time (string in &quot;YYYY/MM/DDTHH:MM&quot; format)</td>
-<td>The time of the newly created walk</td>
+<td>if included, limits results to walks within the last 4 hours</td>
 </tr>
 <tr>
-<td>dog_ids (array of integers)</td>
-<td>an array of dog ids for the dogs that are going on this new walk</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-walk'>Delete a specific Walk</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://localhost:9292/walks/1</span><span class="dl">'</span><span class="p">,{</span>
-  <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">DELETE</span><span class="dl">'</span>
-<span class="p">})</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE http://localhost:9292/walks/8
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-05-31T11:52:00.000Z"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"dog_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="mi">2</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This request removes a Walk from the database and returns the walk formatted in such a way that it can be used to undo the deletion and create the walk again (if the body of this response is sent as the body of a POST request to /walks).</p>
-<h3 id='http-request-8'>HTTP Request</h3>
-<p><code>DELETE /walks/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-5'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the walk to delete</td>
-</tr>
-</tbody></table>
-<h1 id='dogwalks'>DogWalks</h1><h2 id='creating-a-new-dogwalk'>Creating a new DogWalk</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">http://localhost:9292/dog_walks</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
-  <span class="na">method</span><span class="p">:</span> <span class="dl">"</span><span class="s2">POST</span><span class="dl">"</span><span class="p">,</span>
-  <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
-    <span class="dl">"</span><span class="s2">Content-Type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span>
-  <span class="p">},</span>
-  <span class="na">body</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
-    <span class="dl">"</span><span class="s2">walk_time</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2022-05-31T11:52</span><span class="dl">"</span><span class="p">,</span>
-    <span class="dl">"</span><span class="s2">dog_id</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="dl">"</span><span class="s2">pooped</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span>
-  <span class="p">})</span>
-<span class="p">})</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
- <span class="nt">-d</span> <span class="s1">'{
-    "walk_time": "2022-05-31T11:52",
-    "dog_id": 1,
-    "pooped": false
-  }'</span> <span class="se">\</span>
- http://localhost:9292/dog_walks
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"pooped"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"dog_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"walk_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"formatted_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tuesday, 05/31/22 11:30 AM"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint creates a new DogWalk. It is used when interacting with a particular dog and logging a walk for that dog.</p>
-<h3 id='http-request-9'>HTTP Request</h3>
-<p><code>POST /dog_walks</code></p>
-<h3 id='request-body-parameters-4'>Request Body Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>dog_id (integer)</td>
-<td>The ID of the dog to be walked</td>
-</tr>
-<tr>
-<td>walk_time (string in &quot;YYYY-MM-DDTHH:MM&quot; format)</td>
-<td>The time of the walk to be created</td>
-</tr>
-<tr>
-<td>pooped (boolean)</td>
-<td>A boolean value indicating whether or not the Dog pooped on this walk</td>
-</tr>
-</tbody></table>
-<h2 id='update-a-specific-dogwalk'>Update a specific DogWalk</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">http://localhost:9292/dog_walks/1</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
-  <span class="na">method</span><span class="p">:</span> <span class="dl">"</span><span class="s2">PATCH</span><span class="dl">"</span><span class="p">,</span>
-  <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
-    <span class="dl">"</span><span class="s2">Content-Type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span>
-  <span class="p">},</span>
-  <span class="na">body</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
-    <span class="na">pooped</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="na">walk_time</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2022-05-31T11:30</span><span class="dl">"</span>
-  <span class="p">})</span>
-<span class="p">})</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> PATCH <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
- <span class="nt">-d</span> <span class="s1">'{
-    "pooped": true,
-    "walk_time": "2022-05-31T11:30"
-  }'</span> <span class="se">\</span>
- http://localhost:9292/dog_walks/1
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"pooped"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"dog_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"walk_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"formatted_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tuesday, 05/31/22 11:30 AM"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint updates a specific dog_walk in the database and responds with the updated version of the dog_walk&#39;s information. </p>
-<h3 id='http-request-10'>HTTP Request</h3>
-<p><code>PATCH /dog_walks/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-6'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the dog_walk to update</td>
-</tr>
-</tbody></table>
-<h3 id='request-body-parameters-5'>Request Body Parameters</h3>
-<p>All parameters below are optional, only included parameters will update the saved values for this dog_walk.</p>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>pooped (boolean)</td>
-<td>whether or not the dog pooped on this walk</td>
-</tr>
-<tr>
-<td>walk_time (string in &quot;YYYY-MM-DDTHH:MM&quot; format)</td>
-<td>the time that this dog went on this walk</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-dogwalk'>Delete a specific DogWalk</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://localhost:9292/dog_walks/17</span><span class="dl">'</span><span class="p">,{</span>
-  <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">DELETE</span><span class="dl">'</span>
-<span class="p">})</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE http://localhost:9292/dog_walks/17
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"pooped"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"dog_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"walk_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This request removes a DogWalk from the database and returns the DogWalk formatted in such a way that it can be used to undo the deletion and create the DogWalk again (if the body of this response is sent as the body of a POST request to /dog_walks).</p>
-<h3 id='http-request-11'>HTTP Request</h3>
-<p><code>DELETE /dog_walks/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-7'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the dog_walk to delete</td>
+<td>include_dogs (boolean)</td>
+<td>false</td>
+<td>if included, includes the dogs that went on that walk</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
 <aside class="notice">
-These errors may occur as you work with this API, if you see a 500 Internal Server error while you work, check the server logs in the terminal that is running your development server for some ideas about what went wrong.</aside>
+This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+</aside>
 
-<p>The Dog Walker API uses the following error codes:</p>
+<p>The Kittn API uses the following error codes:</p>
 
 <table><thead>
 <tr>
@@ -952,8 +605,8 @@ These errors may occur as you work with this API, if you see a 500 Internal Serv
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="javascript">javascript</a>
                 <a href="#" data-language-name="shell">shell</a>
+                <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
     </div>

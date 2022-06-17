@@ -128,6 +128,14 @@ walks = walks_attributes.map do |attrs|
   Walk.create(attrs)
 end
 
+Walk.ids.each do |walk_id|
+  num_dogs = rand(1..5)
+  dog_ids = Dog.ids.sample(num_dogs)
+  dog_ids.each do |dog_id|
+    DogWalk.create(walk_id: walk_id, dog_id: dog_id)
+  end
+end
+
 
 puts "#{Dog.count} dogs created"
 puts "#{DogWalk.count} dog_walks created"

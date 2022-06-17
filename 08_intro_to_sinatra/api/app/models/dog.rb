@@ -2,6 +2,10 @@ class Dog < ActiveRecord::Base
   has_many :dog_walks, dependent: :destroy
   has_many :walks, through: :dog_walks
 
+  def self.by_breed(breed)
+    self.where(breed: breed)
+  end
+
   def age
     return nil if self.birthdate.nil?
     days_old = (Date.today - self.birthdate).to_i.days

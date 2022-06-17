@@ -4,5 +4,8 @@ class ApplicationController < Sinatra::Base
   # method "URL" do
     
   # end
+  get "/" do 
+
+  end
 
 end
