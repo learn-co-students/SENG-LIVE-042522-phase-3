@@ -1,12 +1,16 @@
 class DogWalksController < ApplicationController
+  
+  # ✅ we want to be able to create dog_walks through the API
   post "/dog_walks" do 
     
   end
 
+  # ✅ we want to be able to update dog_walks through the API
   patch "/dog_walks/:id" do
     
   end
 
+  # ✅ we want to be able to delete dog_walks through the API
   delete "/dog_walks/:id" do
    
   end
@@ -20,4 +24,11 @@ class DogWalksController < ApplicationController
     allowed_params = %w(dog_id walk_time pooped)
     params.select {|param,value| allowed_params.include?(param)}
   end
+
+  def get_dog_walk_json_config()
+    {
+      methods: [:formatted_time]
+    }
+  end
+  
 end

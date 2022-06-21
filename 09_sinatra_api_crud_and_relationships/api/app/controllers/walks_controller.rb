@@ -1,13 +1,33 @@
 class WalksController < ApplicationController
 
   get "/walks" do 
-    serialize(Walk.all)
+    options = get_walk_json_config(include_dogs: params.include?("include_dogs"))
+    Walk.all.to_json(options)
   end
+
+  get "/walks/recent" do 
+    options = get_walk_json_config(include_dogs: params.include?("include_dogs"))
+    Walk.recent.to_json(options)
+  end
+
+  get "/walks/:id" do 
+    walk = Walk.find(params[:id])
+    options = get_walk_json_config(include_dogs: true)
+    walk.to_json(options)
+  end
+
  
+  # ✅ we want to be able to create walks through the API
   post "/walks" do 
     
   end
 
+  # ✅ we want to be able to update walks through the API
+  patch "/walks/:id" do 
+    
+  end
+
+  # ✅ we want to be able to delete walks through the API
   delete "/walks/:id" do 
    
   end
@@ -21,10 +41,21 @@ class WalksController < ApplicationController
     allowed_params = %w(time dog_ids)
     params.select {|param,value| allowed_params.include?(param)}
   end
-
-  def serialize(objects)
-    objects.to_json(
-      methods: :formatted_time
-    )
+  
+  def get_walk_json_config(include_dogs: false)
+    options = {
+      methods: [:formatted_time]
+    }
+    if include_dogs
+      options.merge!({
+        include: {
+          dogs: {
+            methods: [:age]
+          }
+        }
+      }) 
+    end
+    options
   end
+
 end
