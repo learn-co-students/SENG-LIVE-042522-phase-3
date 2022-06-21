@@ -19,17 +19,24 @@ class WalksController < ApplicationController
  
   # ✅ we want to be able to create walks through the API
   post "/walks" do 
-    
+    walk = Walk.create(walk_params)
+    options = get_walk_json_config(include_dogs: true)
+    walk.to_json(options)
   end
 
   # ✅ we want to be able to update walks through the API
   patch "/walks/:id" do 
-    
+    walk = Walk.find(params[:id])
+    walk.update(walk_params)
+    options = get_walk_json_config(include_dogs: true)
+    walk.to_json(options)
   end
 
   # ✅ we want to be able to delete walks through the API
   delete "/walks/:id" do 
-   
+    walk = Walk.find(params[:id])
+    walk.destroy
+    status 204
   end
 
   private 
